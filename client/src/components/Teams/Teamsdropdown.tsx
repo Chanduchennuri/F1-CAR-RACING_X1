@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { teams } from "../../data/Teams";
+import { teamsData } from "../../data/Teams";
 
 interface TeamsDropdownProps {
   isOpen: boolean;
@@ -21,7 +21,7 @@ export default function TeamsDropdown({
 
       <div className="grid grid-cols-2 gap-x-6 gap-y-2">
 
-        {teams.map((team) => (
+        {teamsData.map((team) => (
           <Link
             key={team.id}
             to={`/teams/${team.slug}`}

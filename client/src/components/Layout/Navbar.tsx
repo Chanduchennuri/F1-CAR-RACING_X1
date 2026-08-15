@@ -5,7 +5,7 @@ import {
   type NavLinkRenderProps,
 } from "react-router-dom";
 
-import { teams } from "../../data/Teams";
+import { teamsData } from "../../data/Teams";
 import ProfileDropdown from "../Profile/Profiledrop";
 import f1logo from "../../assets/f1-logo.png";
 const navItems = [
@@ -141,7 +141,7 @@ if (item.label === "Teams") {
 
         <div className="grid grid-cols-2 gap-1">
 
-          {teams.map((team) => (
+          {teamsData.map((team) => (
             <Link
               key={team.id}
               to={`/teams/${team.slug}`}
@@ -350,7 +350,7 @@ if (item.label === "Teams") {
                       {teamsOpen && (
                         <div className="bg-gray-50 px-4 py-2">
 
-                          {teams.map((team) => (
+                          {teamsData.map((team) => (
                             <Link
                               key={team.id}
                               to={`/teams/${team.slug}`}
