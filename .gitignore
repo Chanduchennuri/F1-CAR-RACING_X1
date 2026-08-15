@@ -1,0 +1,233 @@
+# =========================================================
+# F1 STREAMING PLATFORM - ROOT GITIGNORE
+# =========================================================
+
+
+# =========================================================
+# ENVIRONMENT / SECRETS
+# =========================================================
+
+.env
+.env.*
+!.env.example
+
+*.env
+*.env.local
+*.env.development
+*.env.production
+*.env.test
+
+
+# =========================================================
+# NODE.JS
+# =========================================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.pnpm-store/
+
+
+# =========================================================
+# FRONTEND BUILD FILES
+# =========================================================
+
+client/dist/
+client/build/
+client/.vite/
+client/.cache/
+
+*.tsbuildinfo
+
+
+# =========================================================
+# BACKEND BUILD / RUNTIME
+# =========================================================
+
+server/dist/
+server/build/
+server/.cache/
+
+server/uploads/
+server/logs/
+
+
+# =========================================================
+# PYTHON / AI SERVICE
+# =========================================================
+
+# Virtual environments
+ai-service/.venv/
+ai-service/venv/
+ai-service/env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# =========================================================
+# AI / MACHINE LEARNING LOCAL DATA
+# =========================================================
+
+# Local model files
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# Local vector databases / indexes
+chroma/
+qdrant/
+faiss_index/
+
+# AI service logs
+ai-service/logs/
+
+# Local AI data
+ai-service/data/
+
+
+# =========================================================
+# TESTING
+# =========================================================
+
+coverage/
+.nyc_output/
+
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Temporary test files
+tests/tmp/
+
+
+# =========================================================
+# LOGS
+# =========================================================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+
+# =========================================================
+# DATABASE / LOCAL STORAGE
+# =========================================================
+
+# Local MongoDB data
+data/db/
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Local database dumps
+dump/
+dumps/
+*.dump
+
+
+# =========================================================
+# DOCKER
+# =========================================================
+
+docker-data/
+.docker/
+
+
+# =========================================================
+# VSCODE
+# =========================================================
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+
+# =========================================================
+# OTHER IDEs
+# =========================================================
+
+.idea/
+*.iml
+
+
+# =========================================================
+# OPERATING SYSTEM
+# =========================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+
+# =========================================================
+# TEMPORARY FILES
+# =========================================================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+
+temp/
+tmp/
+
+
+# =========================================================
+# GENERATED DOCUMENTATION
+# =========================================================
+
+docs/generated/
+
+
+# =========================================================
+# LOCAL DEVELOPMENT
+# =========================================================
+
+*.local
+.local/
+
+# Keep examples
+!.env.example
+!**/.env.example
