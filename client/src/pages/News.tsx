@@ -1,4 +1,4 @@
-import PageContainer from "../components/Layout/Pagecontainer";
+import PageContainer from "../components/Layout/PageContainer";
 import NewsCard from "../components/News/Newscard";
 import { newsData } from "../data/News";
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PageContainer from "../components/Layout/Pagecontainer";
+import PageContainer from "../components/Layout/PageContainer";
 import VideoCard from "../components/videos/Videoscard";
 import { videosData } from "../data/Videos";
 

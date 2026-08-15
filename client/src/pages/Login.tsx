@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import PageContainer from "../components/Layout/Pagecontainer";
+import PageContainer from "../components/Layout/PageContainer";
 import FormInput from "../components/Forminput";
 import { useState } from "react";
 

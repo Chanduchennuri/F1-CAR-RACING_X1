@@ -1,4 +1,4 @@
-import PageContainer from "../components/Layout/Pagecontainer";
+import PageContainer from "../components/Layout/PageContainer";
 import { scoreboardData } from "../data/Scoreboard";
 import heroImage from "../assets/F1_the.jpg"
 export default function Scoreboard() {

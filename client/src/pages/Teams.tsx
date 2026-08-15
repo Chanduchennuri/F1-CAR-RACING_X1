@@ -1,4 +1,4 @@
-import PageContainer from "../components/Layout/Pagecontainer";
+import PageContainer from "../components/Layout/PageContainer";
 import TeamCard from "../components/Teams/Teamcard";
 import { teamsData } from "../data/Teams";
 

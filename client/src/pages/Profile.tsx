@@ -1,4 +1,4 @@
-import PageContainer from "../components/Layout/Pagecontainer";
+import PageContainer from "../components/Layout/PageContainer";
 import { Link } from "react-router-dom";
 
 export default function Profile() {

@@ -1,4 +1,4 @@
-import PageContainer from "../components/Layout/Pagecontainer";
+import PageContainer from "../components/Layout/PageContainer";
 import { scheduleData } from "../data/Schedule";
 import scheduleVideo from "../assets/f1-schedule.mp4";
 

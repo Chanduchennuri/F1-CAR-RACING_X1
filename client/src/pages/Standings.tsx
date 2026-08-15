@@ -1,4 +1,4 @@
-import PageContainer from "../components/Layout/Pagecontainer";
+import PageContainer from "../components/Layout/PageContainer";
 import { standingsData } from "../data/Standings";
 import trackImage from "../assets/f1-standings.png";
 
