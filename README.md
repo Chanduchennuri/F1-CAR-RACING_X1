@@ -26,6 +26,12 @@ one clean and intelligent platform.
 
 \---
 
+## Architecture
+
+<img width="698" height="505" alt="Architecture_interface" src="https://github.com/user-attachments/assets/218bf47a-3840-4540-b28f-66140a57d2f2" />
+
+
+-------
 
 
 \## 🚀 Features
@@ -157,7 +163,10 @@ Planned AI service for:
 \---
 
 
+## Project Tech Stack Details
+<img width="685" height="948" alt="Application_flow" src="https://github.com/user-attachments/assets/38ef8df6-0a3f-4411-be2b-3365604a68ae" />
 
+-----
 \# 🏗️ Architecture
 
 
