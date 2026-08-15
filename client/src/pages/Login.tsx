@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PageContainer from "../components/Layout/Pagecontainer";
-import FormInput from "../components/FormInput";
+import FormInput from "../components/Forminput";
 import { useState } from "react";
 
 export default function Login() {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import PageContainer from "../components/Layout/Pagecontainer";
-import FormInput from "../components/FormInput";
+import FormInput from "../components/Forminput";
 
 export default function Register() {
   const [name, setName] = useState("");
