@@ -4,6 +4,8 @@ import {
   Route,
 } from "react-router-dom";
 
+import { AuthProvider } from "./context/Authcontext"
+
 import AppLayout from "./components/Layout/AppLayout";
 import Schedule from "./pages/Schedule";
 import Register from "./pages/Register";
@@ -18,34 +20,40 @@ import Videos from "./pages/Videos";
 
 export default function App() {
   return (
-    <Router>
+    <AuthProvider>
+      <Router>
 
-      <Routes>
+        <Routes>
 
-        <Route element={<AppLayout />}>
+          <Route element={<AppLayout />}>
 
-          <Route path="/" element={<Scoreboard />} />
+            <Route path="/" element={<Scoreboard />} />
 
-          <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<Register />} />
 
-          <Route path="/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
 
-          <Route path="/scoreboard" element={<Scoreboard />} />
+            <Route path="/scoreboard" element={<Scoreboard />} />
 
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/schedule" element={<Schedule />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/results" element={<Results />} />
-           <Route path="/standings" element={<Standings />} />
-           <Route path="/teams" element={<Teams />} />
-          
-           <Route path="/videos" element={<Videos />} />
-          
+            <Route path="/profile" element={<Profile />} />
 
-        </Route>
+            <Route path="/schedule" element={<Schedule />} />
 
-      </Routes>
+            <Route path="/news" element={<News />} />
 
-    </Router>
+            <Route path="/results" element={<Results />} />
+
+            <Route path="/standings" element={<Standings />} />
+
+            <Route path="/teams" element={<Teams />} />
+
+            <Route path="/videos" element={<Videos />} />
+
+          </Route>
+
+        </Routes>
+
+      </Router>
+    </AuthProvider>
   );
 }

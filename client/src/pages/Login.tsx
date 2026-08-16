@@ -1,11 +1,42 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PageContainer from "../components/Layout/PageContainer";
 import FormInput from "../components/Forminput";
 import { useState } from "react";
+import { useAuth } from "../context/Authcontext";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+  const { login } = useAuth();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setError("");
+    setLoading(true);
+
+    try {
+      await login({
+        email,
+        password,
+      });
+
+      navigate("/");
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("Login failed");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <PageContainer className="flex min-h-[calc(100vh-160px)] items-center justify-center py-10">
@@ -70,7 +101,10 @@ export default function Login() {
           </div>
 
           {/* FORM */}
-          <form className="space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-4"
+          >
 
             <FormInput
               type="email"
@@ -101,12 +135,20 @@ export default function Login() {
 
             </div>
 
+            {/* ERROR */}
+            {error && (
+              <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+                {error}
+              </div>
+            )}
+
             {/* SUBMIT */}
             <button
               type="submit"
-              className="w-full rounded-lg bg-red-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
+              disabled={loading}
+              className="w-full rounded-lg bg-red-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Sign in
+              {loading ? "Signing in..." : "Sign in"}
             </button>
 
           </form>
