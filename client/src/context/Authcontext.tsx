@@ -13,7 +13,7 @@ import {
   type User,
   type RegisterData,
   type LoginData,
-} from "../services/Authservice";
+} from "../services/AuthService";
 
 interface AuthContextType {
   user: User | null;
