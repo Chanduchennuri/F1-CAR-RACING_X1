@@ -27,23 +27,26 @@ export default function Navbar() {
 
       {/* ================= MAIN NAVBAR ================= */}
 
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-4 lg:px-10">
 
-        {/* ================= BRAND ================= */}
+  {/* BRAND */}
 
-        <Link
-          to="/"
-          onClick={() => {
-            setMobileMenuOpen(false);
-            setTeamsOpen(false);
-          }}
-          className="flex items-center gap-3"
-        ></Link>
-          <img
-             src={f1logo}
-             alt="Formula 1"
-            className="h-12 w-auto object-contain"
-            />
+  <Link
+    to="/"
+    onClick={() => {
+      setMobileMenuOpen(false);
+      setTeamsOpen(false);
+    }}
+    className="flex shrink-0 items-center"
+  >
+    <img
+      src={f1logo}
+      alt="Formula 1"
+      className="h-12 w-auto object-contain"
+    />
+  </Link>
+
+  
 
 
         {/* ================= DESKTOP NAV ================= */}
